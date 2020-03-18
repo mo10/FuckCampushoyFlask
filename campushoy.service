@@ -1,0 +1,11 @@
+[Unit]
+Description=Fuck campushoy systemd service
+After=network.target
+
+[Service]
+WorkingDirectory=/path/to/app/dir
+ExecStart=/usr/bin/python /path/to/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

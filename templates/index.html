@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block head %}
+    <script>
+        const DEL_TASK_API = '{{ url_for('del_task') }}';
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
+{% block content %}
+    <div class="center">
+        <h2 class="title">{% block title %}任务队列{% endblock %}</h2>
+        {% if tasks['data']|length == 0 %}
+            <p class="desc">暂无任务!</p>
+        {% else %}
+            <table class="task-list">
+                <tr>
+                    <th>任务编号</th>
+                    <th>状态</th>
+                    <th>最后更新</th>
+                    <th>操作</th>
+                </tr>
+                {% for task in tasks['data'] %}
+                    <tr>
+                        <td>{{ task['idx'] }}</td>
+                        <td>{{ task['status'] }}</td>
+                        <td>{{ task['lastupd'] }}</td>
+                        <td><a href="#" onclick="delTask({{ task['idx'] }})">删除</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+        <h2 class="title">日志</h2>
+        {% if logs|length == 0 %}
+            <p class="desc">暂无日志!</p>
+        {% else %}
+            <table class="task-list">
+                <tr>
+                    <th>任务编号</th>
+                    <th>状态</th>
+                    <th>时间</th>
+                </tr>
+                {% for log in logs %}
+                    <tr>
+                        <td>{{ log['idx'] }}</td>
+                        <td>{{ log['status'] }}</td>
+                        <td>{{ log['time'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+
+{% endblock %}

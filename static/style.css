@@ -1,0 +1,111 @@
+html{
+    min-height: 100%;
+}
+body{
+        margin: 0;
+}
+.nav-item{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 17px 20px 15px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    transition: all 0.3s;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+}
+.navbar{
+    text-align: center;
+    background-color: rgba(80, 80, 80, 1);
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    top: 0;
+    border-width: 0 0 1px;
+    transition: all cubic-bezier(.15,1,.5,1) 0.8s;
+}
+.container{
+    padding-top: 70px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 768px;
+}
+h2.title {
+    color: rgba(60, 60, 60, 1);
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(80, 80, 80, 0.3);
+    font-size: 30px;
+    font-weight: 300;
+}
+.desc{
+    word-wrap: break-word;
+    color: #999;
+    font-size: 18px;
+    font-weight: 300;
+}
+.qrcode{
+    margin: auto;
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-color: #607D8B;
+}
+.btn{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: rgba(80, 80, 80, 1);
+    background-color: rgba(244, 244, 244, 0);
+    transition: all cubic-bezier(0.4, 0, 1, 1) 0.2s;
+    border-radius: 20px;
+    border: 1px solid rgba(80, 80, 80, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.btn:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(80, 80, 80, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.center{
+    text-align: center;
+}
+.new-task > .trans > .desc{
+    display: contents;
+    margin: 10px;
+}
+.new-task > .trans > input{
+    display: block;
+    margin: auto;
+    height: 30px;
+    text-align: center;
+    width: 300px;
+}
+.trans{
+    transition: all cubic-bezier(0.4, 0, 1, 1) 0.2s;
+}
+.hide{
+    visibility: hidden;
+    opacity: 0;
+}
+.img-hide{
+    height: 0px;
+    visibility: hidden;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

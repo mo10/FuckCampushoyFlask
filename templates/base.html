@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="navbar">
+            <nav class="nav">
+                <a class="nav-item" href="{{ url_for('index') }}">任务队列</a>
+                <a class="nav-item " href="{{ url_for('new_task') }}">添加任务</a>
+            </nav>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
